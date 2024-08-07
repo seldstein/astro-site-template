@@ -1,0 +1,23 @@
+---
+import Contents from "./Contents.astro";
+import Tags from "./Tags.astro";
+
+const { title, description, updated, toc, headings, collection, tags } =
+  Astro.props;
+---
+
+<header aria-label="Page Header" id="page-header">
+  <h1>{title}</h1>
+  {
+    updated && (
+      <p class="updated">
+        This page was updated on
+        <span class="date">{updated}</span>.
+      </p>
+    )
+  }
+  {description && <p class="description">{description}</p>}
+  {tags && <Tags tags={tags} path={collection} />}
+  {toc && <Contents headings={headings} />}
+  <slot />
+</header>
