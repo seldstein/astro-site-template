@@ -19,8 +19,8 @@ const { title, description } = Astro.props;
   <link
     rel="alternate"
     type="application/rss+xml"
-    title="Sam Feldstein"
-    href={new URL("feed.xml", Astro.site)}
+    title={site.title}
+    href=`${site.url}/feed.xml`
   />
   <ViewTransitions />
   <script>
