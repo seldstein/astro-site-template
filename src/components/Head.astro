@@ -1,0 +1,29 @@
+---
+// Components
+import Icons from "../components/Icons.astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+
+// Data
+import { site } from "../../config.mjs";
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="description" content={description || site.description} />
+  <title>{title} | {site.title}</title>
+  <Icons />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Sam Feldstein"
+    href={new URL("feed.xml", Astro.site)}
+  />
+  <ViewTransitions />
+  <script>
+    import "../scripts/swRegister.js";
+  </script>
+</head>
