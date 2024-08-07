@@ -4,3 +4,8 @@ export const site = {
     "A basic template for a website built with Astro.",
   url: "https://astrositetemplate.netlify.app",
 };
+
+export const author = {
+  name: "Sam Feldstein",
+  email: "sam@samfeldstein.xyz"
+}

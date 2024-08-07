@@ -2,12 +2,10 @@
 :root {
   --light: white;
   --dark: black;
-  --dm-light: black;
-  --dm-dark: white;
 
   // Dark mode
   @media (prefers-color-scheme: dark) {
-    --light: var(--dm-light);
-    --dark: var(--dm-dark);
+    --light: black;
+    --dark: white;
   }
 }
